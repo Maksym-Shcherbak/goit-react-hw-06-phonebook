@@ -5,7 +5,7 @@ import { setFilter } from 'redux/filterSlice';
 
 export const SearchFilter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(getFilter);
+  const { enteredName } = useSelector(getFilter);
 
   const onHandleChange = e => dispatch(setFilter(e.target.value));
 
@@ -19,7 +19,7 @@ export const SearchFilter = () => {
         name="filter"
         className={css.filterInput}
         id="filter"
-        value={filter}
+        value={enteredName}
         onChange={onHandleChange}
       />
     </>

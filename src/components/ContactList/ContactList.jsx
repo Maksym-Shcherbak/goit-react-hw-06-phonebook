@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 import { getContacts, getFilter } from 'redux/selectors';
 import { ContactItem } from 'components/ContactItem/ContactItem';
 
-const getFilteredContacts = (contacts, filter) => {
-  if (filter) {
+const getFilteredContacts = (contacts, { enteredName }) => {
+  if (enteredName) {
     return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(filter.toLowerCase())
+      contact.name.toLowerCase().includes(enteredName.toLowerCase())
     );
   }
   return contacts;

@@ -34,7 +34,7 @@ export const ContactForm = () => {
         name="name"
         className={css.contactForm__input}
         id="name"
-        pattern={"^[a-zA-Zа-яА-Я]+(([' \\-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"}
+        pattern="^[a-zA-Zа-яА-Я]+((['\-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         required
       />
       <label htmlFor="number">Number</label>
@@ -43,9 +43,7 @@ export const ContactForm = () => {
         name="number"
         className={css.contactForm__input}
         id="number"
-        pattern={
-          '\\+?\\d{1,4}?[ .\\-\\s]?\\(?\\d{1,3}?\\)?[ .\\-\\s]?\\d{1,4}[ .\\-\\s]?\\d{1,4}[ .\\-\\s]?\\d{1,9}'
-        }
+        pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
         required
       />
       <button type="submit" className={css.contactForm__button}>
